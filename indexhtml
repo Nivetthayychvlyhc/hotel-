@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Paradise</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      background: #f8fafc;
+      color: #1e293b;
+    }
+    header {
+      background: #0f172a;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 30px;
+    }
+    header h1 { margin: 0; font-size: 1.6rem; }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    .hero {
+      background: url('https://source.unsplash.com/1600x600/?hotel,resort') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.2rem; }
+
+    .container { max-width: 1100px; margin: auto; padding: 30px; }
+    section { margin-bottom: 50px; }
+    h2 { margin-bottom: 15px; }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.1);
+      overflow: hidden;
+    }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card-body { padding: 15px; }
+
+    form {
+      display: grid;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, select, button {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+    }
+    button {
+      background: #0f766e;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover { background: #115e59; }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media(max-width: 860px) {
+      .grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Hotel Paradise</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#booking">Booking</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Welcome to Hotel Paradise</h2>
+    <p>Luxury & Comfort in the heart of the city</p>
+  </section>
+
+  <main class="container">
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Hotel Paradise offers premium services with world-class amenities. 
+        Experience luxury, comfort, and hospitality like never before.
+      </p>
+    </section>
+
+    <!-- Rooms -->
+    <section id="rooms">
+      <h2>Our Rooms</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?hotel-room" alt="Deluxe Room">
+          <div class="card-body">
+            <h3>Deluxe Room</h3>
+            <p>Cozy and elegant with modern design.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?suite" alt="Suite">
+          <div class="card-body">
+            <h3>Suite</h3>
+            <p>Spacious suite with a beautiful city view.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?resort-room" alt="Executive Room">
+          <div class="card-body">
+            <h3>Executive Room</h3>
+            <p>Luxurious comfort for business and leisure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking">
+      <h2>Book Your Stay</h2>
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="date" required />
+        <select required>
+          <option value="">Select Room Type</option>
+          <option>Deluxe Room</option>
+          <option>Suite</option>
+          <option>Executive Room</option>
+        </select>
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: info@hotelparadise.com | Phone: +91 98765 43210</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Hotel Paradise. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
